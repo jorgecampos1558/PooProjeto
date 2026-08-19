@@ -1,9 +1,5 @@
 package Interface;
 
-/**
- * Objeto de Transferência de Dados (DTO) para transportar
- * os critérios selecionados na tela de Filtros.
- */
 public class FiltroB {
 
     // 1. Filtro de Nacionalidade
@@ -25,12 +21,11 @@ public class FiltroB {
     private String tipoNota;
     private Double valorNota;
 
-    // 6. Ordenação e Posição (Guias)
-    private String posicao;         // Ex: "Atacantes", "Meio-Campistas", "Defensores", "Goleiros"
-    private String colunaOrdenacao; // Ex: "Gols", "Assistências", "Defesas", "Nota Média"
-    private String tipoOrdem;       // Ex: "Crescente", "Decrescente"
+    // 6. Ordenação e Posição
+    private String posicao;
+    private String colunaOrdenacao;
+    private String tipoOrdem;
 
-    // Construtor completo com todos os parâmetros
     public FiltroB(String tipoNacionalidade, String nacionalidade, Integer idadeMin, Integer idadeMax,
                    String time, String tipoMinutos, Integer valorMinutos, String tipoNota, Double valorNota,
                    String posicao, String colunaOrdenacao, String tipoOrdem) {
@@ -48,13 +43,10 @@ public class FiltroB {
         this.tipoOrdem = tipoOrdem;
     }
 
-    // Construtor padrão (vazio)
     public FiltroB() {
     }
-
-    // ==========================================
+    
     // GETTERS E SETTERS
-    // ==========================================
 
     public String getTipoNacionalidade() {
         return tipoNacionalidade;
