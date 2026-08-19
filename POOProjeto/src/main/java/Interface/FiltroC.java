@@ -59,7 +59,7 @@ public class FiltroC {
                     }
                 }
 
-                return true; // Aprovado em todos os filtros
+                return true;
             })
             .collect(Collectors.toList());
     }
