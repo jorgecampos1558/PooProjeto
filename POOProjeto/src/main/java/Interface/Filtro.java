@@ -11,7 +11,7 @@ public class Filtro extends javax.swing.JFrame {
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Filtro.class.getName());
 
     public Filtro(TelaPrincipal telaPrincipal) {
-        this(); // Garante a execução da inicialização de dimensões e limites
+        this();
         this.telaPrincipal = telaPrincipal;
     }
 
@@ -142,7 +142,6 @@ private FiltroB construirFiltro() {
         }
     }
 
-    // 6. Define Posição e Mapeia a Ordenação conforme a Aba Ativa
     String[] posicoesPorAba = {"Atacante", "Meio-Campista", "Defensor", "Goleiro"};
     int abaSelecionada = jTabbedPane1.getSelectedIndex();
     if (abaSelecionada >= 0 && abaSelecionada < posicoesPorAba.length) {
@@ -228,7 +227,7 @@ private FiltroB construirFiltro() {
             Object selecionado = entry.getKey().getSelectedItem();
             if (selecionado != null && !selecionado.toString().equalsIgnoreCase("Qualquer")) {
                 filtro.setColunaOrdenacao(entry.getValue());
-                filtro.setTipoOrdem(selecionado.toString()); // "Crescente" ou "Decrescente"
+                filtro.setTipoOrdem(selecionado.toString());
                 break;
             }
         }
